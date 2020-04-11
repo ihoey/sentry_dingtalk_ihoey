@@ -3,7 +3,7 @@
 
 import json
 import requests
-import sentry_dingtalk_ihoey
+import Sentry_DingTalk
 from .forms import DingTalkOptionsForm
 from sentry.plugins.bases.notify import NotificationPlugin
 
@@ -11,7 +11,7 @@ DING_TALK_API = 'https://oapi.dingtalk.com/robot/send?access_token={token}'
 
 
 class DingTalkPlugin(NotificationPlugin):
-    author = '1018ji'
+    author = 'ihoey'
     author_url = 'https://github.com/ihoey/sentry_dingtalk_ihoey'
     description = 'sentry extension which can send error to dingtalk'
     resource_links = [
@@ -19,7 +19,7 @@ class DingTalkPlugin(NotificationPlugin):
         ('Bug Tracker', 'https://github.com/ihoey/sentry_dingtalk_ihoey/issues'),
         ('README', 'https://github.com/ihoey/sentry_dingtalk_ihoey/blob/master/README.md'),
     ]
-    version = sentry_dingtalk_ihoey.VERSION
+    version = Sentry_DingTalk.VERSION
 
     slug = 'Ding Talk: Robot'
     title = 'Ding Talk: Robot'

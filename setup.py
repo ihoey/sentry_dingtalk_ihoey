@@ -58,7 +58,7 @@ setup(
 
     entry_points={
         'sentry.plugins': [
-            'sentry_dingtalk_ihoey = sentry_dingtalk_ihoey.plugin:DingTalkPlugin'
+            'Sentry_DingTalk = Sentry_DingTalk.plugin:DingTalkPlugin'
         ]
     },
 
