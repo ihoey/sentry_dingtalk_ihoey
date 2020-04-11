@@ -3,7 +3,7 @@
 
 import json
 import requests
-import Sentry_DingTalk
+import sentry_dingtalk_ihoey
 from .forms import DingTalkOptionsForm
 from sentry.plugins.bases.notify import NotificationPlugin
 
@@ -19,7 +19,7 @@ class DingTalkPlugin(NotificationPlugin):
         ('Bug Tracker', 'https://github.com/ihoey/sentry_dingtalk_ihoey/issues'),
         ('README', 'https://github.com/ihoey/sentry_dingtalk_ihoey/blob/master/README.md'),
     ]
-    version = Sentry_DingTalk.VERSION
+    version = sentry_dingtalk_ihoey.VERSION
 
     slug = 'Ding Talk: Robot'
     title = 'Ding Talk: Robot'
