@@ -46,6 +46,7 @@ class DingTalkPlugin(NotificationPlugin):
         del args, kwargs
 
         error_title = u'【WARNING】捕获到来自【%s】的异常' % event.project.slug
+        self.logger.info(event)
 
         data = {
             "msgtype": 'markdown',

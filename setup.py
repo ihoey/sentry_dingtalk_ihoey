@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 NAME = 'sentry-dingtalk-ihoey'
 AUTHOR = 'ihoey'
 EMAIL = 'mail@ihoey.com'
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 DESCRIPTION = 'sentry extension which can send error to dingtalk.'
 URL = 'https://github.com/ihoey/sentry_dingtalk_ihoey'
 LICENSE = 'MIT'
