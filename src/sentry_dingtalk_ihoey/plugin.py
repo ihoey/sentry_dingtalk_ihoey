@@ -45,7 +45,8 @@ class DingTalkPlugin(NotificationPlugin):
     def send_msg(self, group, event, *args, **kwargs):
         del args, kwargs
 
-        error_title = u'【WARNING】捕获到来自【%s】的异常' % event.project.slug
+        # error_title = u'【WARNING】捕获到来自【%s】的异常' % event.project.slug
+        error_title = u'【%s】捕获到来自【%s】的异常' % (event.get_tag("level"), event.project.slug)
         # self.logger.info(event.__dict__)
 
         data = {
@@ -55,8 +56,8 @@ class DingTalkPlugin(NotificationPlugin):
                 "text": u'#### {title} \n\n > {message} \n\n > {release} \n\n > {environment} \n\n [查看详情]({url})'.format(
                     title=error_title,
                     message=event.title,
-                    release=event.release,
-                    environment=event.environment,
+                    release=event.get_tag("release"),
+                    environment=event.get_tag("environment"),
                     url=u'{url}events/{id}/'.format(
                         url=group.get_absolute_url(),
                         id=event.event_id
